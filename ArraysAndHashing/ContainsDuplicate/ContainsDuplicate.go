@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package ContainsDuplicate
 
 func containsDuplicate(nums []int) bool {
     Hash := make(map[int]bool)
@@ -13,10 +11,4 @@ func containsDuplicate(nums []int) bool {
         }
 	}
 	return false
-}
-
-
-func main(){
-	a := []int{1,2,3,4,5,6}
-	fmt.Println(containsDuplicate(a))
 }

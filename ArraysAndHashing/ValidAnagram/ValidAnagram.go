@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package ValidAnagram
 
 func isAnagram(s string, t string) bool {
     Hash_s := make(map[byte]int)
@@ -15,7 +13,7 @@ func isAnagram(s string, t string) bool {
         Hash_t[t[i]] += 1
 	}
 
-	for key, _ := range Hash_s {
+	for key := range Hash_s {
 		if Hash_s[key] != Hash_t[key]{
 			return false
 		}
@@ -24,9 +22,3 @@ func isAnagram(s string, t string) bool {
 	return true
 }
 
-func main(){
-	word1 := "abcd"
-	word2 := "dacb"
-
-	fmt.Println(isAnagram(word1, word2))
-}
