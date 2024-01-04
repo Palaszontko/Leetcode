@@ -1,16 +1,16 @@
 package TwoSum
 
-func twoSum(nums []int, target int) []int {
+func TwoSum(nums []int, target int) []int {
 
-    hash := make(map[int]int, len(nums))
+	hash := make(map[int]int, len(nums))
 
 	for i, val := range nums {
-	
-		if _, ok := hash[val]; ok && hash[val] != i{
+
+		if _, ok := hash[val]; ok && hash[val] != i {
 			return []int{hash[val], i}
 		} else {
-            hash[target - val] = i
-        }
+			hash[target-val] = i
+		}
 
 	}
 
