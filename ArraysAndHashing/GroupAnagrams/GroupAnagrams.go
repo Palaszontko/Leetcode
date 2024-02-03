@@ -1,29 +1,28 @@
 package GroupAnagrams
 
-
 import (
-	"fmt"
+	"sort"
+	"strings"
 )
 
-func createBinaryHash(text string) int {
-	hash_array := make([]int, 26)
+func GroupAnagrams(strs []string) [][]string {
 
-	for _, letter := range text {
-		pos := int(letter) - 'a'
-		hash_array[pos] += 1
+	hash_map := make(map[string][]string)
+
+	for _, val := range strs {
+		tmp := strings.Split(val, "")
+		sort.Strings(tmp)
+		key := strings.Join(tmp, "")
+
+		hash_map[key] = append(hash_map[key], val)
+
 	}
 
-	fmt.Println(text, hash_array)
+	result_array := make([][]string, 0)
 
-	return 21
+	for _ , val := range hash_map {
+		result_array = append(result_array, val)
+	}
+
+	return result_array
 }
-
-func GroupAnagrams(strs []string) [][]string {
-    for _, val := range strs {
-		createBinaryHash(val)
-    }
-
-	return nil
-}
-
-
