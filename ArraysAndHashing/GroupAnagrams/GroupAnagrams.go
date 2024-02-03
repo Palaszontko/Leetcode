@@ -1,42 +1,29 @@
 package GroupAnagrams
 
+
 import (
-	"reflect"
+	"fmt"
 )
 
-func generate_anagram_hash(word string) map[int]int {
-	hash_map := make(map[int]int)
+func createBinaryHash(text string) int {
+	hash_array := make([]int, 26)
 
-	for _, letter := range word {
-		hash_map[int(letter)] += 1
+	for _, letter := range text {
+		pos := int(letter) - 'a'
+		hash_array[pos] += 1
 	}
 
-	return hash_map
+	fmt.Println(text, hash_array)
+
+	return 21
 }
 
 func GroupAnagrams(strs []string) [][]string {
-	anagrams := make(map[string]map[int]int)
+    for _, val := range strs {
+		createBinaryHash(val)
+    }
 
-	for _, word := range strs {
-		anagrams[word] = generate_anagram_hash(word)
-	}
-
-	list := [][]string{}
-
-	list = append(list, []string{strs[0]})
-
-	for key, hash_map := range anagrams {
-
-		for i := 0; i < len(list); i++ {
-			if reflect.DeepEqual(anagrams[list[i][0]], hash_map) && list[i][0] != key {
-				list[i] = append(list[i], key)
-				break
-			} else {
-				list = append(list, []string{key})
-				break
-			}
-		}
-	}
-
-	return list
+	return nil
 }
+
+
