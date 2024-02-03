@@ -10,6 +10,6 @@ func ContainsDuplicate(nums []int) bool {
 			Hash[i] = true
 		}
 	}
-
+	
 	return false
 }
