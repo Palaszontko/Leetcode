@@ -1,20 +1,19 @@
 package kokoeatingbananas
 
 import (
-	"fmt"
 	"math"
 	"slices"
 )
 
 func MinEatingSpeed(piles []int, h int) int {
 
-	min := int(math.Ceil(float64(sliceSum(piles)) / float64(h))) 
+	min := int(math.Ceil(float64(sliceSum(piles)) / float64(h))) // left (smallest)
 	max := slices.Max(piles) // right
 
 	best := max
 
-	for k := min; k <= max; k++ {
-
+	for min <= max {
+		k := int((min+max) / 2)
 		hours := 0
 
 		for _, pile := range piles {
@@ -23,9 +22,10 @@ func MinEatingSpeed(piles []int, h int) int {
 
 		if hours <= h {
 			best = int(math.Min(float64(best), float64(k)))
+			max = k - 1
+		} else {
+			min = k + 1
 		}
-
-		fmt.Println(h, k, hours, best)
 	}
 
 	return 0
