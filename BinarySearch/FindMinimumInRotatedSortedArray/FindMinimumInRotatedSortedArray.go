@@ -13,17 +13,13 @@ func FindMin(nums []int) int {
 		}
 
 		if nums[l] > nums[mid] {
-			r = mid 
+			r = mid
 		} else if nums[mid] > nums[r] {
-			l = mid 
+			l = mid
 		}
-
+		// it means that slice looks smth like [n+k, n] so we can return right index
 		if len(nums[l:r+1]) == 2 {
-			if nums[l] < nums[r]{
-				return nums[l]
-			}else {
-				return nums[r]
-			}
+			return nums[r]
 		}
 
 	}
@@ -46,4 +42,4 @@ func FindMin(nums []int) int {
 // -------------
 // 		   6 7 1
 // -------------
-//             1 
+//             1
