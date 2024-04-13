@@ -1,12 +1,12 @@
 package searchinrotatedsortedarray
 
 func Search(nums []int, target int) int {
-	
+
 	left := 0
 	right := len(nums) - 1
 
 	for left <= right {
-		mid := int((left + right) / 2) 
+		mid := int((left + right) / 2)
 
 		if target == nums[mid] {
 			return mid
