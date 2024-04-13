@@ -1,6 +1,6 @@
-# My NeetCode 150 solutions
+# My Leetcode solutions repository
 
-My NeetCode 150 Practice Problems.
+This repository is dedicated to my solutions for the **NeetCode 150** and also includes solutions to other **LeetCode** challenges.
 
 NeetCode 150 is a curated list of 150 LeetCode problems designed to cover all possible patterns & topics in data structures.
 
