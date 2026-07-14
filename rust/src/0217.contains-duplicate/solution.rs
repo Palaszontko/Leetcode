@@ -2,15 +2,13 @@
 // leetgo: dev
 // https://leetcode.com/problems/contains-duplicate/
 
-use std::collections::HashSet;
-
 use anyhow::Result;
 use leetgo_rs::*;
 
 struct Solution;
 
 // @lc code=begin
-
+use std::collections::HashSet;
 impl Solution {
     pub fn contains_duplicate(nums: Vec<i32>) -> bool {
         let mut seen: HashSet<i32> = HashSet::with_capacity(nums.len());
