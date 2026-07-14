@@ -7,6 +7,10 @@ name = 'contains-duplicate'
 path = 'src/0217.contains-duplicate/solution.rs'
 
 [[bin]]
+name = 'valid-anagram'
+path = 'src/0242.valid-anagram/solution.rs'
+
+[[bin]]
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
 
