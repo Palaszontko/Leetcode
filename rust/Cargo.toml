@@ -3,6 +3,10 @@ name = 'two-sum'
 path = 'src/0001.two-sum/solution.rs'
 
 [[bin]]
+name = 'contains-duplicate'
+path = 'src/0217.contains-duplicate/solution.rs'
+
+[[bin]]
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
 
