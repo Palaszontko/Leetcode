@@ -2,6 +2,10 @@
 name = 'two-sum'
 path = 'src/0001.two-sum/solution.rs'
 
+[[bin]]
+name = 'daily-temperatures'
+path = 'src/0739.daily-temperatures/solution.rs'
+
 [dependencies]
 anyhow = '1.0.79'
 leetgo-rs = '0.2.1'
