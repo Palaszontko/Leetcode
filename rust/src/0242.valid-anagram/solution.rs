@@ -19,7 +19,7 @@ impl Solution {
 
         for (&a, &b) in s.as_bytes().iter().zip(t.as_bytes()) {
             table[(a - b'a') as usize] += 1;
-            table[(b - b'a') as usize] += 1;
+            table[(b - b'a') as usize] -= 1;
         }
 
         table.iter().all(|&v| v == 0)
