@@ -11,27 +11,32 @@ struct Solution;
 use std::collections::HashMap;
 impl Solution {
     pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
-        let mut mapped: HashMap<String, Vec<String>> = HashMap::with_capacity(strs.len());
+        let mut mapped: HashMap<[u8; 26], Vec<String>> = HashMap::with_capacity(strs.len());
 
         for word in strs.into_iter() {
-            let mut word_chars_sorted: Vec<char> = word.chars().collect();
+            let chars_key = Self::count_chars(&word);
 
-            word_chars_sorted.sort_unstable();
-
-            let sorted_word: String = word_chars_sorted.iter().collect();
-
-            mapped.entry(sorted_word).or_default().push(word);
+            mapped.entry(chars_key).or_default().push(word);
         }
 
         mapped.into_values().collect()
     }
-}
 
+    fn count_chars(word: &str) -> [u8; 26] {
+        let mut table: [u8; 26] = [0u8; 26];
+
+        for letter in word.as_bytes().iter() {
+            table[(letter - b'a') as usize] += 1
+        }
+
+        table
+    }
+}
 // @lc code=end
 
 fn main() -> Result<()> {
     let strs: Vec<String> = deserialize(&read_line()?)?;
-    let ans: Vec<Vec<String>> = Solution::group_anagrams(strs).into();
+    let ans: Vec<Vec<String>> = Solution::group_anagrams(strs);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
