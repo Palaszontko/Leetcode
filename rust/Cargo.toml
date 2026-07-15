@@ -3,6 +3,10 @@ name = 'two-sum'
 path = 'src/0001.two-sum/solution.rs'
 
 [[bin]]
+name = 'group-anagrams'
+path = 'src/0049.group-anagrams/solution.rs'
+
+[[bin]]
 name = 'contains-duplicate'
 path = 'src/0217.contains-duplicate/solution.rs'
 
