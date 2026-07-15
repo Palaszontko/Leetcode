@@ -15,6 +15,10 @@ name = 'valid-anagram'
 path = 'src/0242.valid-anagram/solution.rs'
 
 [[bin]]
+name = 'top-k-frequent-elements'
+path = 'src/0347.top-k-frequent-elements/solution.rs'
+
+[[bin]]
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
 
