@@ -11,33 +11,18 @@ struct Solution;
 
 impl Solution {
     pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
-        let prefix_factor: Vec<i32> = nums
-            .iter()
-            .scan(1, |state, val| {
-                *state *= *val;
-                Some(*state)
-            })
-            .collect();
-
-        let suffix_factor: Vec<i32> = nums
-            .iter()
-            .rev()
-            .scan(1, |state, val| {
-                *state *= *val;
-                Some(*state)
-            })
-            .collect::<Vec<i32>>()
-            .into_iter()
-            .rev()
-            .collect();
-
         let mut result: Vec<i32> = vec![1; nums.len()];
 
-        *result.first_mut().unwrap() = suffix_factor[1];
-        *result.last_mut().unwrap() = prefix_factor[nums.len() - 2];
+        let mut prefix_mul: i32 = 1;
+        for i in 0..nums.len() {
+            result[i] = prefix_mul;
+            prefix_mul *= nums[i];
+        }
 
-        for i in 1..(nums.len() - 1) {
-            result[i] = prefix_factor[i - 1] * suffix_factor[i + 1]
+        let mut suffix_mul: i32 = 1;
+        for i in (0..nums.len()).rev() {
+            result[i] *= suffix_mul;
+            suffix_mul *= nums[i];
         }
 
         result
@@ -48,7 +33,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let nums: Vec<i32> = deserialize(&read_line()?)?;
-    let ans: Vec<i32> = Solution::product_except_self(nums).into();
+    let ans: Vec<i32> = Solution::product_except_self(nums);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
