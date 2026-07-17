@@ -15,10 +15,6 @@ impl Solution {
         let mut cols: Vec<HashSet<char>> = vec![HashSet::with_capacity(9); 9];
         let mut boxes: Vec<HashSet<char>> = vec![HashSet::with_capacity(9); 9];
 
-        println!("{:?}", rows);
-        println!("{:?}", cols);
-        println!("{:?}", boxes);
-
         for i in 0..9 {
             for j in 0..9 {
                 let val = board[i][j];
