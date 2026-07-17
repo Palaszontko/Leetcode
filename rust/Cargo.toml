@@ -3,6 +3,10 @@ name = 'two-sum'
 path = 'src/0001.two-sum/solution.rs'
 
 [[bin]]
+name = 'valid-sudoku'
+path = 'src/0036.valid-sudoku/solution.rs'
+
+[[bin]]
 name = 'group-anagrams'
 path = 'src/0049.group-anagrams/solution.rs'
 
