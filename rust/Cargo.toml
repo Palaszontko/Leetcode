@@ -11,6 +11,10 @@ name = 'group-anagrams'
 path = 'src/0049.group-anagrams/solution.rs'
 
 [[bin]]
+name = 'longest-consecutive-sequence'
+path = 'src/0128.longest-consecutive-sequence/solution.rs'
+
+[[bin]]
 name = 'contains-duplicate'
 path = 'src/0217.contains-duplicate/solution.rs'
 
