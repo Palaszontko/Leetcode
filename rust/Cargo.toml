@@ -11,6 +11,10 @@ name = 'group-anagrams'
 path = 'src/0049.group-anagrams/solution.rs'
 
 [[bin]]
+name = 'valid-palindrome'
+path = 'src/0125.valid-palindrome/solution.rs'
+
+[[bin]]
 name = 'longest-consecutive-sequence'
 path = 'src/0128.longest-consecutive-sequence/solution.rs'
 
