@@ -19,6 +19,10 @@ name = 'longest-consecutive-sequence'
 path = 'src/0128.longest-consecutive-sequence/solution.rs'
 
 [[bin]]
+name = 'two-sum-ii-input-array-is-sorted'
+path = 'src/0167.two-sum-ii-input-array-is-sorted/solution.rs'
+
+[[bin]]
 name = 'contains-duplicate'
 path = 'src/0217.contains-duplicate/solution.rs'
 
