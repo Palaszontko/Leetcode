@@ -7,6 +7,10 @@ name = 'longest-substring-without-repeating-characters'
 path = 'src/0003.longest-substring-without-repeating-characters/solution.rs'
 
 [[bin]]
+name = '3sum'
+path = 'src/0015.3sum/solution.rs'
+
+[[bin]]
 name = 'valid-sudoku'
 path = 'src/0036.valid-sudoku/solution.rs'
 
