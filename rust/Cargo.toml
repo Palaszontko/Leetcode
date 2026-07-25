@@ -58,6 +58,10 @@ path = 'src/0347.top-k-frequent-elements/solution.rs'
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
 
+[[bin]]
+name = 'maximum-product-of-two-digits'
+path = 'src/3536.maximum-product-of-two-digits/solution.rs'
+
 [dependencies]
 anyhow = '1.0.79'
 leetgo-rs = '0.2.1'
