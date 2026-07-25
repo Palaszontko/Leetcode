@@ -41,7 +41,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let height: Vec<i32> = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::trap(height).into();
+    let ans: i32 = Solution::trap(height);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
