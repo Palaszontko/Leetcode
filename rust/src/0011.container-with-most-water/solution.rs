@@ -37,7 +37,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let height: Vec<i32> = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::max_area(height).into();
+    let ans: i32 = Solution::max_area(height);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

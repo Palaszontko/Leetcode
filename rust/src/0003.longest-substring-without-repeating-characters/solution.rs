@@ -8,7 +8,7 @@ use leetgo_rs::*;
 struct Solution;
 
 // @lc code=begin
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
         if s.is_empty() {

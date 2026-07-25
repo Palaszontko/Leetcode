@@ -15,10 +15,8 @@ impl Solution {
         let mut cols: Vec<HashSet<char>> = vec![HashSet::with_capacity(9); 9];
         let mut boxes: Vec<HashSet<char>> = vec![HashSet::with_capacity(9); 9];
 
-        for i in 0..9 {
-            for j in 0..9 {
-                let val = board[i][j];
-
+        for (i, row) in board.iter().enumerate().take(9) {
+            for (j, &val) in row.iter().enumerate().take(9) {
                 if val == '.' {
                     continue;
                 }
