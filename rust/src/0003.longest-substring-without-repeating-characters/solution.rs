@@ -8,35 +8,30 @@ use leetgo_rs::*;
 struct Solution;
 
 // @lc code=begin
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
         if s.is_empty() {
             return 0;
         }
-        let mut seen: HashSet<char> = HashSet::new();
+        let mut seen: HashMap<char, usize> = HashMap::new();
         let mut left = 0;
         let mut right = 1;
 
         let letters: Vec<char> = s.chars().collect();
         let mut max_size = 1;
 
-        seen.insert(*letters.first().unwrap());
+        seen.insert(*letters.first().unwrap(), 0);
 
         while left < right && right < s.len() {
-            if seen.insert(letters[right]) {
+            if seen.insert(letters[right], right).is_none() {
                 right += 1;
             } else {
-                seen.remove(&letters[right]);
-
-                while letters[left] != letters[right] {
-                    seen.remove(&letters[left]);
-                    left += 1;
-                }
+                left = seen.remove(&letters[right]).unwrap() + 1;
 
                 if left == right - 1 || left == right {
                     seen.clear();
-                    seen.insert(letters[left]);
+                    seen.insert(letters[left], left);
                     left += 1;
                     right += 1;
                 } else {

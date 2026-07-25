@@ -7,6 +7,10 @@ name = 'longest-substring-without-repeating-characters'
 path = 'src/0003.longest-substring-without-repeating-characters/solution.rs'
 
 [[bin]]
+name = 'container-with-most-water'
+path = 'src/0011.container-with-most-water/solution.rs'
+
+[[bin]]
 name = '3sum'
 path = 'src/0015.3sum/solution.rs'
 
