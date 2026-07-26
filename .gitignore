@@ -8,3 +8,9 @@ __pycache__/
 
 # Rust (cargo build artifacts)
 rust/target/
+
+# VS Code debug scratch input
+.vscode/stdin.txt
+
+.vscode
+*.sh
