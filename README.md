@@ -1,5 +1,12 @@
 # My Leetcode solutions repository
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/Palaszontko?theme=dark">
+    <img src="https://leetcard.jacoblin.cool/Palaszontko?theme=light" alt="My LeetCode stats">
+  </picture>
+</p>
+
 This repository is dedicated to my solutions for the **NeetCode 150** and also includes solutions to other **LeetCode** challenges.
 
 NeetCode 150 is a curated list of 150 LeetCode problems designed to cover all possible patterns & topics in data structures.
