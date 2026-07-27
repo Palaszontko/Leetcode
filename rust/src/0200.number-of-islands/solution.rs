@@ -44,12 +44,11 @@ impl Solution {
         for direction in DIRECTIONS {
             let new_i = i as i32 + direction.0;
             let new_j = j as i32 + direction.1;
-            if Self::within_bounds(new_i, new_j, grid.len(), grid[0].len()) {
-                if grid[new_i as usize][new_j as usize].eq(&'1')
-                    && visited.insert((new_i as usize, new_j as usize))
-                {
-                    Self::flood_fill(visited, grid, new_i as usize, new_j as usize);
-                }
+            if Self::within_bounds(new_i, new_j, grid.len(), grid[0].len())
+                && grid[new_i as usize][new_j as usize].eq(&'1')
+                && visited.insert((new_i as usize, new_j as usize))
+            {
+                Self::flood_fill(visited, grid, new_i as usize, new_j as usize);
             }
         }
     }
