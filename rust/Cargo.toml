@@ -63,12 +63,20 @@ name = 'longest-repeating-character-replacement'
 path = 'src/0424.longest-repeating-character-replacement/solution.rs'
 
 [[bin]]
+name = 'permutation-in-string'
+path = 'src/0567.permutation-in-string/solution.rs'
+
+[[bin]]
 name = 'maximum-product-of-three-numbers'
 path = 'src/0628.maximum-product-of-three-numbers/solution.rs'
 
 [[bin]]
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
+
+[[bin]]
+name = 'longest-mountain-in-array'
+path = 'src/0845.longest-mountain-in-array/solution.rs'
 
 [[bin]]
 name = 'maximum-product-of-two-digits'
