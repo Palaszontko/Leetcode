@@ -27,6 +27,10 @@ name = 'group-anagrams'
 path = 'src/0049.group-anagrams/solution.rs'
 
 [[bin]]
+name = 'minimum-window-substring'
+path = 'src/0076.minimum-window-substring/solution.rs'
+
+[[bin]]
 name = 'valid-palindrome'
 path = 'src/0125.valid-palindrome/solution.rs'
 
