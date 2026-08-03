@@ -55,6 +55,10 @@ name = 'product-of-array-except-self'
 path = 'src/0238.product-of-array-except-self/solution.rs'
 
 [[bin]]
+name = 'sliding-window-maximum'
+path = 'src/0239.sliding-window-maximum/solution.rs'
+
+[[bin]]
 name = 'valid-anagram'
 path = 'src/0242.valid-anagram/solution.rs'
 
