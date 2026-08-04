@@ -1,0 +1,11 @@
+input:
+["MinStack","push","push","push","getMin","pop","top","getMin"]
+[[],[-2],[0],[-3],[],[],[],[]]
+output:
+[null,null,null,null,-3,null,0,-2]
+
+input:
+["MinStack","push","push","push","getMin","top","pop","getMin"]
+[[],[-2],[0],[-1],[],[],[],[]]
+output:
+[null,null,null,null,-2,-1,null,-2]
