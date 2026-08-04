@@ -8,21 +8,20 @@ use leetgo_rs::*;
 struct Solution;
 
 // @lc code=begin
-use std::collections::VecDeque;
 impl Solution {
     pub fn is_valid(s: String) -> bool {
-        let mut stack: VecDeque<u8> = VecDeque::with_capacity(s.len());
+        let mut stack: Vec<u8> = Vec::with_capacity(s.len());
 
-        for par in s.bytes() {
-            if par.eq(&b'(') || par.eq(&b'[') || par.eq(&b'{') {
-                stack.push_back(par);
-            } else if stack.back().is_some_and(|x| x.eq(&b'(') && par.eq(&b')'))
-                || stack.back().is_some_and(|x| x.eq(&b'[') && par.eq(&b']'))
-                || stack.back().is_some_and(|x| x.eq(&b'{') && par.eq(&b'}'))
-            {
-                stack.pop_back();
-            } else {
-                return false;
+        for b in s.bytes() {
+            match b {
+                b'(' => stack.push(b')'),
+                b'[' => stack.push(b']'),
+                b'{' => stack.push(b'}'),
+                _ => {
+                    if stack.pop() != Some(b) {
+                        return false;
+                    }
+                }
             }
         }
 
