@@ -7,9 +7,13 @@ use leetgo_rs::*;
 
 // @lc code=begin
 
+struct Data {
+    value: i32,
+    min: i32,
+}
+
 struct MinStack {
-    stack: Vec<i32>,
-    min_vals: Vec<i32>,
+    stack: Vec<Data>,
 }
 
 /**
@@ -19,37 +23,33 @@ struct MinStack {
 impl MinStack {
     fn new() -> Self {
         MinStack {
-            stack: Vec::new(),
-            min_vals: Vec::new(),
+            stack: Vec::<Data>::new(),
         }
     }
 
     fn push(&mut self, value: i32) {
         if self.stack.is_empty() {
-            self.stack.push(value);
-            self.min_vals.push(value);
+            self.stack.push(Data { value, min: value });
+        } else if value < Self::get_min(self) {
+            self.stack.push(Data { value, min: value });
         } else {
-            self.stack.push(value);
-
-            if value < Self::get_min(self) {
-                self.min_vals.push(value);
-            } else {
-                self.min_vals.push(self.get_min());
-            }
+            self.stack.push(Data {
+                value,
+                min: Self::get_min(self),
+            });
         }
     }
 
     fn pop(&mut self) {
         self.stack.pop();
-        self.min_vals.pop();
     }
 
     fn top(&self) -> i32 {
-        *self.stack.last().unwrap()
+        self.stack.last().unwrap().value
     }
 
     fn get_min(&self) -> i32 {
-        *self.min_vals.last().unwrap()
+        self.stack.last().unwrap().min
     }
 }
 
