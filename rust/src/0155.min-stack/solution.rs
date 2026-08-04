@@ -22,22 +22,12 @@ struct MinStack {
  */
 impl MinStack {
     fn new() -> Self {
-        MinStack {
-            stack: Vec::<Data>::new(),
-        }
+        MinStack { stack: Vec::new() }
     }
 
     fn push(&mut self, value: i32) {
-        if self.stack.is_empty() {
-            self.stack.push(Data { value, min: value });
-        } else if value < Self::get_min(self) {
-            self.stack.push(Data { value, min: value });
-        } else {
-            self.stack.push(Data {
-                value,
-                min: Self::get_min(self),
-            });
-        }
+        let min = self.stack.last().map_or(value, |x| x.min.min(value));
+        self.stack.push(Data { value, min });
     }
 
     fn pop(&mut self) {
