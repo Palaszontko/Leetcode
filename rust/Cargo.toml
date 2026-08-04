@@ -15,6 +15,10 @@ name = '3sum'
 path = 'src/0015.3sum/solution.rs'
 
 [[bin]]
+name = 'valid-parentheses'
+path = 'src/0020.valid-parentheses/solution.rs'
+
+[[bin]]
 name = 'valid-sudoku'
 path = 'src/0036.valid-sudoku/solution.rs'
 
@@ -29,6 +33,10 @@ path = 'src/0049.group-anagrams/solution.rs'
 [[bin]]
 name = 'minimum-window-substring'
 path = 'src/0076.minimum-window-substring/solution.rs'
+
+[[bin]]
+name = 'remove-duplicates-from-sorted-array-ii'
+path = 'src/0080.remove-duplicates-from-sorted-array-ii/solution.rs'
 
 [[bin]]
 name = 'best-time-to-buy-and-sell-stock'
