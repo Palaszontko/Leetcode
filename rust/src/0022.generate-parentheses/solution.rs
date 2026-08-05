@@ -2,48 +2,36 @@
 // leetgo: dev
 // https://leetcode.com/problems/generate-parentheses/
 
-use std::unreachable;
-
 use anyhow::Result;
 use leetgo_rs::*;
 
 struct Solution;
 
 // @lc code=begin
-
+use std::collections::VecDeque;
 impl Solution {
     pub fn generate_parenthesis(n: i32) -> Vec<String> {
-        let mut stack: Vec<String> = Vec::new();
-        let mut result: Vec<String> = Vec::new();
+        let n = n as usize;
+        let mut res: Vec<String> = vec![];
+        let mut q: VecDeque<(String, usize, usize)> = VecDeque::new();
+        q.push_back(("(".to_string(), 1, 0));
 
-        Self::generate(&mut stack, &mut result, 0, 0, n as usize);
+        while let Some((s, open, close)) = q.pop_front() {
+            if close == open && open == n {
+                res.push(s);
+                continue;
+            }
 
-        result
-    }
+            if close < n && (close + 1) <= open {
+                q.push_back((format!("{s})"), open, close + 1));
+            }
 
-    fn generate(
-        stack: &mut Vec<String>,
-        result: &mut Vec<String>,
-        open_n: usize,
-        closed_n: usize,
-        n: usize,
-    ) {
-        if open_n == n && closed_n == n {
-            result.push(stack.concat());
-            return;
+            if open < n {
+                q.push_back((format!("{s}("), open + 1, close));
+            }
         }
 
-        if open_n < n {
-            stack.push("(".to_string());
-            Self::generate(stack, result, open_n + 1, closed_n, n);
-            stack.pop();
-        }
-
-        if closed_n < open_n {
-            stack.push(")".to_string());
-            Self::generate(stack, result, open_n, closed_n + 1, n);
-            stack.pop();
-        }
+        res
     }
 }
 
@@ -51,7 +39,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let n: i32 = deserialize(&read_line()?)?;
-    let ans: Vec<String> = Solution::generate_parenthesis(n).into();
+    let ans: Vec<String> = Solution::generate_parenthesis(n);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
