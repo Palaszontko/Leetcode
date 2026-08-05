@@ -19,6 +19,10 @@ name = 'valid-parentheses'
 path = 'src/0020.valid-parentheses/solution.rs'
 
 [[bin]]
+name = 'generate-parentheses'
+path = 'src/0022.generate-parentheses/solution.rs'
+
+[[bin]]
 name = 'valid-sudoku'
 path = 'src/0036.valid-sudoku/solution.rs'
 
