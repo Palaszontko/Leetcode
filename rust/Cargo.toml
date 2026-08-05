@@ -51,6 +51,10 @@ name = 'longest-consecutive-sequence'
 path = 'src/0128.longest-consecutive-sequence/solution.rs'
 
 [[bin]]
+name = 'evaluate-reverse-polish-notation'
+path = 'src/0150.evaluate-reverse-polish-notation/solution.rs'
+
+[[bin]]
 name = 'min-stack'
 path = 'src/0155.min-stack/solution.rs'
 
