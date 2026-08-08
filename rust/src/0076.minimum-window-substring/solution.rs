@@ -98,7 +98,7 @@ impl Solution {
 fn main() -> Result<()> {
     let s: String = deserialize(&read_line()?)?;
     let t: String = deserialize(&read_line()?)?;
-    let ans: String = Solution::min_window(s, t).into();
+    let ans: String = Solution::min_window(s, t);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

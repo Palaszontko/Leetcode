@@ -32,7 +32,7 @@ impl Solution {
 fn main() -> Result<()> {
     let numbers: Vec<i32> = deserialize(&read_line()?)?;
     let target: i32 = deserialize(&read_line()?)?;
-    let ans: Vec<i32> = Solution::two_sum(numbers, target).into();
+    let ans: Vec<i32> = Solution::two_sum(numbers, target);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

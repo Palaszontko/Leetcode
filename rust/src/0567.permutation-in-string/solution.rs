@@ -55,7 +55,7 @@ impl Solution {
 fn main() -> Result<()> {
     let s1: String = deserialize(&read_line()?)?;
     let s2: String = deserialize(&read_line()?)?;
-    let ans: bool = Solution::check_inclusion(s1, s2).into();
+    let ans: bool = Solution::check_inclusion(s1, s2);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

@@ -34,7 +34,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let nums: Vec<i32> = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::maximum_product(nums).into();
+    let ans: i32 = Solution::maximum_product(nums);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

@@ -43,7 +43,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let tokens: Vec<String> = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::eval_rpn(tokens).into();
+    let ans: i32 = Solution::eval_rpn(tokens);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

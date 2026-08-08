@@ -53,7 +53,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let temperatures: Vec<i32> = deserialize(&read_line()?)?;
-    let ans: Vec<i32> = Solution::daily_temperatures(temperatures).into();
+    let ans: Vec<i32> = Solution::daily_temperatures(temperatures);
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())

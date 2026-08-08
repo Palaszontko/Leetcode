@@ -67,11 +67,11 @@ fn main() -> Result<()> {
                 output.push("null".to_string());
             }
             "top" => {
-                let ans: i32 = obj.top().into();
+                let ans: i32 = obj.top();
                 output.push(serialize(ans)?);
             }
             "getMin" => {
-                let ans: i32 = obj.get_min().into();
+                let ans: i32 = obj.get_min();
                 output.push(serialize(ans)?);
             }
             _ => panic!("unknown op"),

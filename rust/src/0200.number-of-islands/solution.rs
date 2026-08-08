@@ -66,8 +66,7 @@ impl Solution {
 // Warning: this is a manual question, the generated test code may be incorrect.
 fn main() -> Result<()> {
     let grid: Vec<Vec<char>> = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::num_islands(grid).into();
-
+    let ans: i32 = Solution::num_islands(grid);
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
 }
