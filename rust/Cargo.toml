@@ -111,6 +111,10 @@ name = 'longest-mountain-in-array'
 path = 'src/0845.longest-mountain-in-array/solution.rs'
 
 [[bin]]
+name = 'car-fleet'
+path = 'src/0853.car-fleet/solution.rs'
+
+[[bin]]
 name = 'maximum-product-of-two-digits'
 path = 'src/3536.maximum-product-of-two-digits/solution.rs'
 
