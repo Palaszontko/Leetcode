@@ -35,6 +35,14 @@ name = 'group-anagrams'
 path = 'src/0049.group-anagrams/solution.rs'
 
 [[bin]]
+name = 'search-a-2d-matrix'
+path = 'src/0074.search-a-2d-matrix/solution.rs'
+
+[[bin]]
+name = 'sort-colors'
+path = 'src/0075.sort-colors/solution.rs'
+
+[[bin]]
 name = 'minimum-window-substring'
 path = 'src/0076.minimum-window-substring/solution.rs'
 
