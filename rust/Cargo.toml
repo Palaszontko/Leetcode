@@ -107,6 +107,10 @@ name = 'maximum-product-of-three-numbers'
 path = 'src/0628.maximum-product-of-three-numbers/solution.rs'
 
 [[bin]]
+name = 'binary-search'
+path = 'src/0704.binary-search/solution.rs'
+
+[[bin]]
 name = 'daily-temperatures'
 path = 'src/0739.daily-temperatures/solution.rs'
 
