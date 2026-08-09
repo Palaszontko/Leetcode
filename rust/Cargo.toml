@@ -43,6 +43,10 @@ name = 'remove-duplicates-from-sorted-array-ii'
 path = 'src/0080.remove-duplicates-from-sorted-array-ii/solution.rs'
 
 [[bin]]
+name = 'largest-rectangle-in-histogram'
+path = 'src/0084.largest-rectangle-in-histogram/solution.rs'
+
+[[bin]]
 name = 'best-time-to-buy-and-sell-stock'
 path = 'src/0121.best-time-to-buy-and-sell-stock/solution.rs'
 
