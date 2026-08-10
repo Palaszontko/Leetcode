@@ -131,6 +131,10 @@ name = 'car-fleet'
 path = 'src/0853.car-fleet/solution.rs'
 
 [[bin]]
+name = 'koko-eating-bananas'
+path = 'src/0875.koko-eating-bananas/solution.rs'
+
+[[bin]]
 name = 'maximum-product-of-two-digits'
 path = 'src/3536.maximum-product-of-two-digits/solution.rs'
 
