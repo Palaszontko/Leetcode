@@ -71,6 +71,10 @@ name = 'evaluate-reverse-polish-notation'
 path = 'src/0150.evaluate-reverse-polish-notation/solution.rs'
 
 [[bin]]
+name = 'find-minimum-in-rotated-sorted-array'
+path = 'src/0153.find-minimum-in-rotated-sorted-array/solution.rs'
+
+[[bin]]
 name = 'min-stack'
 path = 'src/0155.min-stack/solution.rs'
 
