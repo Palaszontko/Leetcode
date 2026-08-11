@@ -143,6 +143,10 @@ name = 'koko-eating-bananas'
 path = 'src/0875.koko-eating-bananas/solution.rs'
 
 [[bin]]
+name = 'time-based-key-value-store'
+path = 'src/0981.time-based-key-value-store/solution.rs'
+
+[[bin]]
 name = 'maximum-product-of-two-digits'
 path = 'src/3536.maximum-product-of-two-digits/solution.rs'
 
