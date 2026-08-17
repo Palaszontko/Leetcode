@@ -19,6 +19,10 @@ name = 'valid-parentheses'
 path = 'src/0020.valid-parentheses/solution.rs'
 
 [[bin]]
+name = 'merge-two-sorted-lists'
+path = 'src/0021.merge-two-sorted-lists/solution.rs'
+
+[[bin]]
 name = 'generate-parentheses'
 path = 'src/0022.generate-parentheses/solution.rs'
 
@@ -89,6 +93,10 @@ path = 'src/0167.two-sum-ii-input-array-is-sorted/solution.rs'
 [[bin]]
 name = 'number-of-islands'
 path = 'src/0200.number-of-islands/solution.rs'
+
+[[bin]]
+name = 'reverse-linked-list'
+path = 'src/0206.reverse-linked-list/solution.rs'
 
 [[bin]]
 name = 'contains-duplicate'
