@@ -75,6 +75,10 @@ name = 'longest-consecutive-sequence'
 path = 'src/0128.longest-consecutive-sequence/solution.rs'
 
 [[bin]]
+name = 'reorder-list'
+path = 'src/0143.reorder-list/solution.rs'
+
+[[bin]]
 name = 'evaluate-reverse-polish-notation'
 path = 'src/0150.evaluate-reverse-polish-notation/solution.rs'
 
@@ -153,6 +157,10 @@ path = 'src/0875.koko-eating-bananas/solution.rs'
 [[bin]]
 name = 'time-based-key-value-store'
 path = 'src/0981.time-based-key-value-store/solution.rs'
+
+[[bin]]
+name = 'find-the-largest-almost-missing-integer'
+path = 'src/3471.find-the-largest-almost-missing-integer/solution.rs'
 
 [[bin]]
 name = 'maximum-product-of-two-digits'
