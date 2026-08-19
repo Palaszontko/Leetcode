@@ -159,6 +159,10 @@ name = 'time-based-key-value-store'
 path = 'src/0981.time-based-key-value-store/solution.rs'
 
 [[bin]]
+name = 'cinema-seat-allocation'
+path = 'src/1386.cinema-seat-allocation/solution.rs'
+
+[[bin]]
 name = 'find-the-largest-almost-missing-integer'
 path = 'src/3471.find-the-largest-almost-missing-integer/solution.rs'
 
