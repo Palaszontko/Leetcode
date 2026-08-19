@@ -13,7 +13,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_number_of_families(n: i32, mut reserved_seats: Vec<Vec<i32>>) -> i32 {
-        reserved_seats.sort_by_key(|x| *x.first().unwrap());
+        reserved_seats.sort_unstable_by_key(|x| *x.first().unwrap());
 
         let mut start_row = *reserved_seats.first().unwrap().first().unwrap();
 
