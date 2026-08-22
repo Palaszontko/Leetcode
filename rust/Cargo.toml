@@ -170,6 +170,10 @@ path = 'src/3471.find-the-largest-almost-missing-integer/solution.rs'
 name = 'maximum-product-of-two-digits'
 path = 'src/3536.maximum-product-of-two-digits/solution.rs'
 
+[[bin]]
+name = 'check-divisibility-by-digit-sum-and-product'
+path = 'src/3622.check-divisibility-by-digit-sum-and-product/solution.rs'
+
 [dependencies]
 anyhow = '1.0.79'
 leetgo-rs = '0.2.1'
