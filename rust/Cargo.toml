@@ -163,6 +163,10 @@ name = 'cinema-seat-allocation'
 path = 'src/1386.cinema-seat-allocation/solution.rs'
 
 [[bin]]
+name = 'shortest-and-lexicographically-smallest-beautiful-string'
+path = 'src/2904.shortest-and-lexicographically-smallest-beautiful-string/solution.rs'
+
+[[bin]]
 name = 'find-the-largest-almost-missing-integer'
 path = 'src/3471.find-the-largest-almost-missing-integer/solution.rs'
 
