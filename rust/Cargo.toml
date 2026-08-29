@@ -67,6 +67,10 @@ name = 'maximum-depth-of-binary-tree'
 path = 'src/0104.maximum-depth-of-binary-tree/solution.rs'
 
 [[bin]]
+name = 'balanced-binary-tree'
+path = 'src/0110.balanced-binary-tree/solution.rs'
+
+[[bin]]
 name = 'best-time-to-buy-and-sell-stock'
 path = 'src/0121.best-time-to-buy-and-sell-stock/solution.rs'
 
