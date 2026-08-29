@@ -63,6 +63,10 @@ name = 'largest-rectangle-in-histogram'
 path = 'src/0084.largest-rectangle-in-histogram/solution.rs'
 
 [[bin]]
+name = 'same-tree'
+path = 'src/0100.same-tree/solution.rs'
+
+[[bin]]
 name = 'maximum-depth-of-binary-tree'
 path = 'src/0104.maximum-depth-of-binary-tree/solution.rs'
 
