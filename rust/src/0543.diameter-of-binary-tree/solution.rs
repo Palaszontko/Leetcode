@@ -28,7 +28,6 @@ struct Solution;
 //   }
 // }
 use std::cell::RefCell;
-use std::fmt::Alignment::Right;
 use std::rc::Rc;
 impl Solution {
     pub fn diameter_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
@@ -56,7 +55,7 @@ impl Solution {
 
 fn main() -> Result<()> {
     let root: BinaryTree = deserialize(&read_line()?)?;
-    let ans: i32 = Solution::diameter_of_binary_tree(root.into()).into();
+    let ans: i32 = Solution::diameter_of_binary_tree(root.into());
 
     println!("\noutput: {}", serialize(ans)?);
     Ok(())
