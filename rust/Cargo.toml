@@ -111,6 +111,10 @@ name = 'two-sum-ii-input-array-is-sorted'
 path = 'src/0167.two-sum-ii-input-array-is-sorted/solution.rs'
 
 [[bin]]
+name = 'binary-tree-right-side-view'
+path = 'src/0199.binary-tree-right-side-view/solution.rs'
+
+[[bin]]
 name = 'number-of-islands'
 path = 'src/0200.number-of-islands/solution.rs'
 
