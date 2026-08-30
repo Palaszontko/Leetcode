@@ -67,6 +67,10 @@ name = 'same-tree'
 path = 'src/0100.same-tree/solution.rs'
 
 [[bin]]
+name = 'binary-tree-level-order-traversal'
+path = 'src/0102.binary-tree-level-order-traversal/solution.rs'
+
+[[bin]]
 name = 'maximum-depth-of-binary-tree'
 path = 'src/0104.maximum-depth-of-binary-tree/solution.rs'
 
