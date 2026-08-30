@@ -63,6 +63,10 @@ name = 'largest-rectangle-in-histogram'
 path = 'src/0084.largest-rectangle-in-histogram/solution.rs'
 
 [[bin]]
+name = 'validate-binary-search-tree'
+path = 'src/0098.validate-binary-search-tree/solution.rs'
+
+[[bin]]
 name = 'same-tree'
 path = 'src/0100.same-tree/solution.rs'
 
@@ -197,6 +201,10 @@ path = 'src/0981.time-based-key-value-store/solution.rs'
 [[bin]]
 name = 'cinema-seat-allocation'
 path = 'src/1386.cinema-seat-allocation/solution.rs'
+
+[[bin]]
+name = 'count-good-nodes-in-binary-tree'
+path = 'src/1448.count-good-nodes-in-binary-tree/solution.rs'
 
 [[bin]]
 name = 'shortest-and-lexicographically-smallest-beautiful-string'
