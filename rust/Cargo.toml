@@ -135,6 +135,10 @@ name = 'invert-binary-tree'
 path = 'src/0226.invert-binary-tree/solution.rs'
 
 [[bin]]
+name = 'kth-smallest-element-in-a-bst'
+path = 'src/0230.kth-smallest-element-in-a-bst/solution.rs'
+
+[[bin]]
 name = 'lowest-common-ancestor-of-a-binary-search-tree'
 path = 'src/0235.lowest-common-ancestor-of-a-binary-search-tree/solution.rs'
 
