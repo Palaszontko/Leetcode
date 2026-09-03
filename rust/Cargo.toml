@@ -79,6 +79,10 @@ name = 'maximum-depth-of-binary-tree'
 path = 'src/0104.maximum-depth-of-binary-tree/solution.rs'
 
 [[bin]]
+name = 'construct-binary-tree-from-preorder-and-inorder-traversal'
+path = 'src/0105.construct-binary-tree-from-preorder-and-inorder-traversal/solution.rs'
+
+[[bin]]
 name = 'balanced-binary-tree'
 path = 'src/0110.balanced-binary-tree/solution.rs'
 
