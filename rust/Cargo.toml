@@ -207,6 +207,10 @@ name = 'koko-eating-bananas'
 path = 'src/0875.koko-eating-bananas/solution.rs'
 
 [[bin]]
+name = 'k-closest-points-to-origin'
+path = 'src/0973.k-closest-points-to-origin/solution.rs'
+
+[[bin]]
 name = 'time-based-key-value-store'
 path = 'src/0981.time-based-key-value-store/solution.rs'
 
