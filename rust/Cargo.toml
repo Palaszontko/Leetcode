@@ -211,6 +211,10 @@ name = 'time-based-key-value-store'
 path = 'src/0981.time-based-key-value-store/solution.rs'
 
 [[bin]]
+name = 'last-stone-weight'
+path = 'src/1046.last-stone-weight/solution.rs'
+
+[[bin]]
 name = 'cinema-seat-allocation'
 path = 'src/1386.cinema-seat-allocation/solution.rs'
 
