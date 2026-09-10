@@ -17,6 +17,15 @@ struct User {
     posts: Vec<(i32, i32)>,
 }
 
+impl User {
+    fn new(id: i32) -> Self {
+        Self {
+            following: HashSet::from([id]),
+            posts: Vec::new(),
+        }
+    }
+}
+
 impl Twitter {
     fn new() -> Self {
         Self {
@@ -28,21 +37,15 @@ impl Twitter {
     fn post_tweet(&mut self, user_id: i32, tweet_id: i32) {
         self.users
             .entry(user_id)
-            .and_modify(|user| user.posts.push((self.timestamp, tweet_id)))
-            .or_insert(User {
-                following: {
-                    let mut hashset = HashSet::new();
-                    hashset.insert(user_id);
-                    hashset
-                },
-                posts: vec![(self.timestamp, tweet_id)],
-            });
+            .or_insert_with(|| User::new(user_id))
+            .posts
+            .push((self.timestamp, tweet_id));
         self.timestamp += 1;
     }
 
     fn get_news_feed(&self, user_id: i32) -> Vec<i32> {
         let Some(user) = self.users.get(&user_id) else {
-            return Vec::default();
+            return Vec::new();
         };
 
         #[derive(PartialEq, PartialOrd, Ord, Eq)]
@@ -50,7 +53,7 @@ impl Twitter {
             timestamp: i32,
             post_id: i32,
             user_id: i32,
-            index: i32,
+            index: usize,
         }
 
         let mut heap: BinaryHeap<HeapEntry> = user
@@ -64,7 +67,7 @@ impl Twitter {
                     timestamp,
                     post_id,
                     user_id,
-                    index: i as i32,
+                    index: i,
                 })
             })
             .collect();
@@ -79,8 +82,8 @@ impl Twitter {
             feed.push(heap_entry.post_id);
 
             if heap_entry.index > 0 {
-                let (timestamp, post_id) = self.users.get(&heap_entry.user_id).unwrap().posts
-                    [(heap_entry.index - 1) as usize];
+                let (timestamp, post_id) =
+                    self.users.get(&heap_entry.user_id).unwrap().posts[heap_entry.index - 1];
                 heap.push(HeapEntry {
                     timestamp,
                     post_id,
@@ -96,23 +99,15 @@ impl Twitter {
     fn follow(&mut self, follower_id: i32, followee_id: i32) {
         self.users
             .entry(follower_id)
-            .or_insert_with(|| User {
-                following: {
-                    let mut hashset = HashSet::new();
-                    hashset.insert(followee_id);
-                    hashset.insert(follower_id);
-                    hashset
-                },
-                posts: Vec::new(),
-            })
+            .or_insert_with(|| User::new(follower_id))
             .following
             .insert(followee_id);
     }
 
     fn unfollow(&mut self, follower_id: i32, followee_id: i32) {
-        self.users.entry(follower_id).and_modify(|user| {
+        if let Some(user) = self.users.get_mut(&follower_id) {
             user.following.remove(&followee_id);
-        });
+        }
     }
 }
 
