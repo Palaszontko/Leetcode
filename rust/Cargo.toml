@@ -167,6 +167,10 @@ name = 'top-k-frequent-elements'
 path = 'src/0347.top-k-frequent-elements/solution.rs'
 
 [[bin]]
+name = 'design-twitter'
+path = 'src/0355.design-twitter/solution.rs'
+
+[[bin]]
 name = 'longest-repeating-character-replacement'
 path = 'src/0424.longest-repeating-character-replacement/solution.rs'
 
