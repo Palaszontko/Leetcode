@@ -8,10 +8,7 @@ use leetgo_rs::*;
 struct Solution;
 
 // @lc code=begin
-use std::{
-    collections::{BinaryHeap, HashMap},
-    println,
-};
+use std::collections::{BinaryHeap, HashMap};
 
 #[derive(PartialEq, Eq)]
 struct HeapEntry {
@@ -21,10 +18,10 @@ struct HeapEntry {
 
 impl Ord for HeapEntry {
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
-        self.count
-            .cmp(&other.count)
-            .then_with(|| other.word.cmp(&self.word))
-            .reverse()
+        other
+            .count
+            .cmp(&self.count)
+            .then_with(|| self.word.cmp(&other.word))
     }
 }
 
@@ -55,13 +52,10 @@ impl Solution {
             }
         }
 
-        let mut result: Vec<String> = Vec::with_capacity(k as usize);
-        for _ in 0..k {
-            result.push(heap.pop().unwrap().word);
-        }
-        result.reverse();
-
-        result
+        heap.into_sorted_vec()
+            .into_iter()
+            .map(|entry| entry.word)
+            .collect()
     }
 }
 
