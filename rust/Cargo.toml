@@ -55,6 +55,10 @@ name = 'minimum-window-substring'
 path = 'src/0076.minimum-window-substring/solution.rs'
 
 [[bin]]
+name = 'subsets'
+path = 'src/0078.subsets/solution.rs'
+
+[[bin]]
 name = 'remove-duplicates-from-sorted-array-ii'
 path = 'src/0080.remove-duplicates-from-sorted-array-ii/solution.rs'
 
