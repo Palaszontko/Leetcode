@@ -14,11 +14,11 @@ struct Solution;
 impl Solution {
     pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut result: Vec<Vec<i32>> = Vec::new();
-        Self::back(&mut vec![], &mut result, &mut nums.clone());
+        Self::back(vec![], &mut result, nums);
         result
     }
 
-    fn back(current: &mut Vec<i32>, result: &mut Vec<Vec<i32>>, nums: &mut Vec<i32>) {
+    fn back(current: Vec<i32>, result: &mut Vec<Vec<i32>>, nums: Vec<i32>) {
         if nums.is_empty() {
             result.push(current.clone());
             return;
@@ -29,7 +29,7 @@ impl Solution {
             let mut nums_copy = nums.clone();
             current_copy.push(nums[i]);
             nums_copy.remove(i);
-            Self::back(&mut current_copy, result, &mut nums_copy);
+            Self::back(current_copy, result, nums_copy);
         }
     }
 }
